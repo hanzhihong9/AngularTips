@@ -1,0 +1,18 @@
+<p class="warning">This is a server: {{getTitle()}}</p>
+<app-mapone></app-mapone>
+
+<button [disabled]="!allowNewServer" class="btn btn-primary" (click)="doClick()"> add server</button>
+<!-- <input
+ type="text"
+ (input)="doInput($event)"
+> -->
+
+
+<label for="example-ngModel">[(ngModel)]:</label>
+<input [(ngModel)]="myName" id="example-ngModel">
+
+<p *ngIf="allowNewServer; else noServer">myName is : {{myName}}</p>
+<ng-template #noServer><p>this is noServer part</p></ng-template>
+<p [ngStyle]="{backgroundColor: getColor()}"> this ng style</p>
+<p [ngClass]="{warning: !allowNewServer}"> this ng class, allowNewServer is {{allowNewServer}}</p>
+<app-mapone *ngFor="let map of mapones"></app-mapone>
