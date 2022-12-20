@@ -127,3 +127,12 @@ ng-class
   <div>{{obj?.value}}</div>
 </ng-template>
 ```
+
+
+## interview questions
+
+https://github.com/sudheerj/angular-interview-questions
+
+- How do you update specific properties of a form model?
+- What are the different ways to group form controls?
+- 

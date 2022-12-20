@@ -19,7 +19,8 @@ import { MyInterceptor } from './httpInterceptor';
     providers: [
      {
         provide: HTTP_INTERCEPTORS,
-        useClass: MyInterceptor
+        useClass: MyInterceptor,
+        multi:true
 
      }
 
