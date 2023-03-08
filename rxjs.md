@@ -1,5 +1,10 @@
 # Angular + Rxjs
 
+## abserable 
+ - hot vs cold
+ - finite vs infinite
+
+## RXJS functions
 
 - of , from
 
