@@ -37,6 +37,13 @@ request().pipe(share())
 - switchMap
 - debounceTime
 - DistictUntilChanged
+
+```
+// compare object
+distinctUntilChanged((a, b) => JSON.stringify(a).split('').sort().join('') === JSON.stringify(b).split('').sort().join('')),
+
+```
+
 - Take TakeUitil TakeWhile TakeLaset Fist
 - mergemap/flatmap
 - concate
