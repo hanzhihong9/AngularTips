@@ -98,6 +98,9 @@ enum MyE {
   
 ## tool for faster Angular
 
+### use module map to find out the big module and try to use a samller one
+### use DEV tool memory to check how many instances of a component
+
 ### issues
 
 - network slow -- smaller js
@@ -122,4 +125,21 @@ enum MyE {
 // to do Pre-feteching, use :
 // ngx-quicklink
 // guess.js
+```
+
+## use view addd child but use renderer if needed
+ 
+### Not Angular has a view layer in momery !
+```ts
+ onst iframe = this.renderer.createElement('iframe') as HTMLIFrameElement;
+      iframe.name = this.uniqueName; // use renderer, because iframe name should be added before inserting it into DOM , otherwise window.name is '' in the iframe window
+      iframe.style.minHeight = this.iHeight;
+      iframe.src = unwrapSafeValue(srcUrlSafe);
+      iframe.width = "100%";
+      iframe.scrolling = "no";
+      iframe.frameBorder = "0"
+      this.renderer.appendChild(this.iframeParent.nativeElement, iframe);
+
+// and to get the iframe 
+ iframElement = this.childElement.nativeElement.getElementsByTagName('iframe')[0];
 ```
