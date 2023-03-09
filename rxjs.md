@@ -48,3 +48,6 @@ distinctUntilChanged((a, b) => JSON.stringify(a).split('').sort().join('') === J
 - mergemap/flatmap
 - concate
 - fornkjoin -- like Promise.all
+
+### use RXJS
+ - https://stackblitz.com/edit/rxjs-operating-heavily-dynamic-uis?file=README.md
